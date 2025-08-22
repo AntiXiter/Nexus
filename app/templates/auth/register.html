@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Registrar{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-4">
+    <h3 class="mb-3">Criar conta</h3>
+    <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <div class="mb-3"><label class="form-label">Nome</label><input class="form-control" name="nome" required></div>
+      <div class="mb-3"><label class="form-label">E-mail</label><input class="form-control" name="email" type="email" required></div>
+      <div class="mb-3"><label class="form-label">Senha</label><input class="form-control" name="senha" type="password" required></div>
+      <button class="btn btn-success w-100">Registrar</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
