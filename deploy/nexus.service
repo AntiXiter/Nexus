@@ -5,10 +5,10 @@ After=network.target
 [Service]
 User=widson
 Group=www-data
-WorkingDirectory=/home/widson/Projetos/Nexus/nexus
-Environment="PATH=/home/widson/Projetos/Nexus/nexus/.venv/bin"
-EnvironmentFile=/home/widson/Projetos/Nexus/nexus/.env
-ExecStart=/home/widson/Projetos/Nexus/nexus/.venv/bin/gunicorn -c gunicorn.conf.py wsgi:app
+WorkingDirectory=/home/widson/Projetos/Nexus
+Environment="PATH=/home/widson/Projetos/Nexus/.venv/bin"
+EnvironmentFile=/home/widson/Projetos/Nexus/.env
+ExecStart=/home/widson/Projetos/Nexus/.venv/bin/gunicorn -c gunicorn.conf.py wsgi:app
 Restart=always
 
 [Install]
